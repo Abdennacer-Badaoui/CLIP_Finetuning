@@ -1,5 +1,5 @@
 # Enhancing Semantic Image Understanding with Fine-Tuned CLIP
-In this project, I fine-tuned the image encoder of CLIP (Contrastive Language-Image Pre-training) using pairs of images from the CIFAR-10 dataset. The goal was to enhance the model's ability to make images within the same class more similar while making images from different classes more dissimilar. To achieve this, I employed a custom loss function designed to encourage the model to learn meaningful representations of images based on their semantic content.
+In this mini project, I fine-tuned the image encoder of CLIP (Contrastive Language-Image Pre-training) using pairs of images from the CIFAR-10 dataset. The goal was to enhance the model's ability to make images within the same class more similar while making images from different classes more dissimilar. To achieve this, I employed a custom loss function designed to encourage the model to learn meaningful representations of images based on their semantic content.
 
 The custom loss function (Contrastive Loss) leverages cosine similarity between the embeddings of two images. By maximizing the cosine similarity for images within the same class and minimizing it for images from different classes, the model learns to effectively discriminate between different classes while capturing the underlying similarities within each class.
 
