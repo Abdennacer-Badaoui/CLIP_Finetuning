@@ -4,6 +4,7 @@ In this project, I fine-tuned the image encoder of CLIP (Contrastive Language-Im
 The custom loss function leverages cosine similarity between the embeddings of two images. By maximizing the cosine similarity for images within the same class and minimizing it for images from different classes, the model learns to effectively discriminate between different classes while capturing the underlying similarities within each class.
 
 Let \( S_{i,j} \) represent the cosine similarity between embedding vectors \( \text{emb}_i \) of image i and \( \text{emb}_j \) of image j.
+
 The loss \( L_{i,j} \) between embeddings \( \text{emb}_i \) and \( \text{emb}_j \) can be defined as:
 
 \[ L_{i,j} = (1 - \text{label}) \times S_{i,j} + \text{label} \times (1 - S_{i,j}) \]
