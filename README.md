@@ -7,7 +7,7 @@ Let $S_{i,j}$ represent the cosine similarity between embedding vectors $\text{e
 
 The loss $L_{i,j}$ between embeddings $\text{emb}_i$ and $\text{emb}_j$ can be defined as:
 
-$\[ L_{i,j} = (1 - \text{label}) \times S_{i,j} + \text{label} \times (1 - S_{i,j}) \]$
+$L_{i,j}$ = $\[(1 - \text{label}) \times S_{i,j} + \text{label} \times (1 - S_{i,j}) \]$
 
 where $\text{label}$ is a binary indicator variable defined as follows:
 - $\text{label} = 1$ if $\text{emb}_i$ and $\text{emb}_j$ belong to the same class,
