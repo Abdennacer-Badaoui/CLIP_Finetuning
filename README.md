@@ -16,3 +16,32 @@ where $\text{label}$ is a binary indicator variable defined as follows:
 - $\text{label} = 0$ otherwise.
 
 This approach is particularly fascinating for image search and retrieval tasks. By embedding images into a shared semantic space, we enable efficient similarity-based retrieval. This means that given a query image, we can retrieve images with similar semantic content from a large dataset. This capability has numerous applications, from content-based image retrieval in digital libraries to visual search in e-commerce platforms. By fine-tuning CLIP in this manner, we not only enhance its performance on classification tasks but also empower it for various downstream applications requiring image understanding and retrieval.
+
+# Results
+
+![3](https://github.com/Abdennacer-Badaoui/CLIP_Finetuning/assets/106801897/ae181123-f7f4-466e-beed-68554def7fb1)
+![4](https://github.com/Abdennacer-Badaoui/CLIP_Finetuning/assets/106801897/3b52895d-7677-4cc2-8864-ca9e8d288680)
+
+Let's compare the similarities from the original and fine-tuned CLIP models based on the provided heatmaps:
+
+### Original CLIP Model Similarities:
+- The original CLIP model shows a range of similarities between different image pairs, with higher similarity scores for some pairs even if they don't belong to the same class.
+- Notably, some dissimilar pairs (e.g., image pairs from different classes) still have relatively high similarity scores, indicating that the model doesn't perfectly distinguish between different classes.
+- Examples of high similarities between different classes include:
+  - The horse and the cat (0.6770).
+  - The plane and the car (0.5328).
+
+### Fine-tuned CLIP Model Similarities:
+- After fine-tuning, the similarities for images from the same class are more distinct and higher, indicating the model has learned to better group images within the same class.
+- Dissimilar pairs have significantly lower similarity scores, showing that the model has learned to better differentiate between images from different classes.
+- Examples of clear improvements include:
+  - The horse (index 0) and the horse (index 4) have a high similarity score (0.9232) after fine-tuning.
+  - The cat (index 3) and the cat (index 7) also show improved similarity (0.8971).
+  - The similarity between different classes, such as the horse (index 0) and the car (index 2), is reduced (0.1799).
+
+### Summary:
+Fine-tuning has made the CLIP model more effective at distinguishing between different classes and reinforcing the similarity within the same class. This is evident from the heatmaps where:
+- Same-class pairs have higher similarity scores in the fine-tuned model compared to the original.
+- Different-class pairs have lower similarity scores in the fine-tuned model, indicating better separation of distinct categories.
+
+This fine-tuning process enhances CLIP's performance in tasks like image search and retrieval, where accurately grouping similar images and separating dissimilar ones is crucial. This improvement is visually represented in the heatmaps, demonstrating the effectiveness of the fine-tuning approach.
