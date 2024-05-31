@@ -47,15 +47,15 @@ Below is a summary of the comparison based on the provided mean similarity matri
 
 ### Observations:
 
-  Original CLIP Model:
-      The mean similarity scores are generally high (mostly above 0.8) across all classes.
-      There is a high degree of intra-class similarity (diagonal elements are close to 1.0).
-      Inter-class similarities are also relatively high, indicating that the original CLIP model does not distinctly separate different classes well.
+- Original CLIP Model:
+  - The mean similarity scores are generally high (mostly above 0.8) across all classes.
+  - There is a high degree of intra-class similarity (diagonal elements are close to 1.0).
+  - Inter-class similarities are also relatively high, indicating that the original CLIP model does not distinctly separate different classes well.
 
-  Fine-tuned CLIP Model:
-      The mean similarity scores are more varied, with many scores significantly lower than those of the original model.
-      Intra-class similarities remain high, but inter-class similarities are lower compared to the original model.
-      The fine-tuned model shows better separation between different classes (lower inter-class similarity scores), which indicates better discriminative power for the CIFAR-10 dataset.
+- Fine-tuned CLIP Model:
+  - The mean similarity scores are more varied, with many scores significantly lower than those of the original model.
+  - Intra-class similarities remain high, but inter-class similarities are lower compared to the original model.
+  - The fine-tuned model shows better separation between different classes (lower inter-class similarity scores), which indicates better discriminative power for the CIFAR-10 dataset.
 
 
 ### Summary:
