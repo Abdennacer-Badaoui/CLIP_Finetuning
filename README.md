@@ -39,6 +39,25 @@ Let's compare the similarities from the original and fine-tuned CLIP models base
   - The cat (index 3) and the cat (index 7) also show improved similarity (0.8971).
   - The similarity between different classes, such as the horse (index 0) and the car (index 2), is reduced (0.1799).
 
+# Analysis of Mean Similarity Matrices
+
+Below is a summary of the comparison based on the provided mean similarity matrices.
+![5](https://github.com/Abdennacer-Badaoui/CLIP_Finetuning/assets/106801897/23f2c05d-971a-435f-9404-e552ecccbaf3)
+![6](https://github.com/Abdennacer-Badaoui/CLIP_Finetuning/assets/106801897/bcba3aef-d069-4810-961d-3ab697c1233f)
+
+### Observations:
+
+  Original CLIP Model:
+      The mean similarity scores are generally high (mostly above 0.8) across all classes.
+      There is a high degree of intra-class similarity (diagonal elements are close to 1.0).
+      Inter-class similarities are also relatively high, indicating that the original CLIP model does not distinctly separate different classes well.
+
+  Fine-tuned CLIP Model:
+      The mean similarity scores are more varied, with many scores significantly lower than those of the original model.
+      Intra-class similarities remain high, but inter-class similarities are lower compared to the original model.
+      The fine-tuned model shows better separation between different classes (lower inter-class similarity scores), which indicates better discriminative power for the CIFAR-10 dataset.
+
+
 ### Summary:
 Fine-tuning has made the CLIP model more effective at distinguishing between different classes and reinforcing the similarity within the same class. This is evident from the heatmaps where:
 - Same-class pairs have higher similarity scores in the fine-tuned model compared to the original.
